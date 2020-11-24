@@ -21,8 +21,9 @@ ces <- read_csv(here("data", "ces3demographics.csv")) %>%
 ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) + #setting x and y axis
   geom_point() + #creating geom_point graph
   geom_hex() + #change the graph type to a 2D hexbin
-  labs(x = "Percentage White in Census Tract", y = "CalEnviroScreen Pollution Burden Score") + #add axis labels
-  scale_fill_gradient(low = "darkorchid4", high = "magenta") + #add fillcolor gradient
+  labs(x = "Percentage White in Census Tract", y = "CalEnviroScreen Pollution Burden Score", #add axis labels
+       title = "Percentage of white individuals vs. CalEnviroScreen pollution burden scores of \ncensus tracts in California") + #add descriptive title
+  scale_fill_gradient(low = "navy", high = "orange") + #add fillcolor gradient
   theme_minimal() #add theme
 ```
 
